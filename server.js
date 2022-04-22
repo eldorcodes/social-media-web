@@ -54,7 +54,7 @@ app.use((req,res,next) => {
 })
 require('./passport/local');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // connect server to mongodb
 mongoose.connect(keys.MongoURI).then(() => {
