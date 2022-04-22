@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Profile</h1>
+     <div class="card" style="width:400px">
+   {{#if loggedUser.avatar}}
+    <img class="card-img-top" 
+    src="/{{loggedUser.avatar}}" 
+    alt="Card image" style="width:100%">
+    {{else}}
+     <img class="card-img-top" 
+    src="/images/user-logo.png" 
+    alt="Card image" style="width:100%">
+    {{/if}}
+    <div class="card-body">
+      <h4 class="card-title">{{loggedUser.name}}</h4>
+       <h4 class="card-title">{{loggedUser.email}}</h4>
+    </div>
+  </div>
+    <a href="/logout"><button class="btn btn-danger">Logout</button></a>
+</div>

@@ -1,0 +1,26 @@
+<div class="parent" id="userProfile">
+    <div class="container">
+  <div class="row">
+      <div class="col-sm-4">
+            <div class="card">
+            {{#if person.avatar}}
+            <img class="card-img-top" src="/{{person.avatar}}" alt="Card image">
+            {{else}}
+            <img class="card-img-top" src="/images/user-logo.png" alt="Card image">
+            {{/if}}
+    <div class="card-body">
+        <h4 class="card-title">{{person.name}}</h4>
+    </div>
+    </div>
+      </div>
+      <div class="col"></div>
+  </div>
+ 
+</div>
+<div class="element fixed">
+        <a href="#" class="btn btn-outline-info" style="border-radius: 100px;">
+            <i class="fa fa-wechat" style="font-size:50px;"></i>
+        </a>
+    </div>
+</div>
+

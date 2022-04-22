@@ -1,0 +1,40 @@
+<div id="signup">
+  <div class="container mt-3">
+    <div style="height: 80px;background-color:blueviolet"></div>
+ <div class="row">
+     <div class="col"></div>
+     <div class="col-md-5">
+       <h1 style="text-align: center;color:aliceblue">Register</h1>
+       <p class="red" style="text-align: center;">{{message}}</p>
+         <div class="card" style="padding: 10px;border-radius:10px;background-color:teal">
+           <div class="card-body">
+              <form action="/signup" method="POST">
+    <div class="mb-5 mt-5">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="full name" name="name" required>
+    </div>
+
+    <div class="mb-5 mt-5">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+    </div>
+
+    <div class="mb-5">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+    </div>
+
+    <div class="mb-5">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" name="confirmPassword" required>
+    </div>
+    <button type="submit" class="btn-block btn btn-danger">Signup</button>
+  </form> 
+           </div>
+         </div>
+  <a href="/"><p style="text-align: center;color:aliceblue">Need to login?</p></a>
+     </div>
+     <div class="col"></div>
+ </div>
+</div>
+</div>

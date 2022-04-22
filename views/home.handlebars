@@ -1,0 +1,38 @@
+<div id="home">
+
+<div class="container">
+  <div style="height: 80px;background-color:blue"></div>
+ <div class="row">
+     <div class="col"></div>
+     <div class="col-md-5">
+         <h2 style="color: aliceblue; text-align:center;margin-bottom:20px">Social Media App</h2>
+         <p  style="text-align: center;color:aliceblue">{{message}}</p>
+         <p class="red" style="text-align: center;">{{errorMsg}}</p>
+         <div class="card" style="padding: 10px;border-radius:10px;background-color:rgb(30, 126, 210)">
+           <div class="card-body">
+          <form action="/login" method="post">
+    <div class="mb-5 mt-5">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="mb-5">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+    </div>
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn-block btn btn-danger">Login</button>
+  </form>
+           </div>
+         </div>
+  <a href="/signup"><p style="text-align: center;color:aliceblue">Need an Account?</p></a>
+     </div>
+     <div class="col">
+       
+     </div>
+ </div>
+</div>
+</div>

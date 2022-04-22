@@ -1,0 +1,35 @@
+<div id="users">
+    <div class="container-fluid">
+    <h1>Users</h1>
+    <div class="row">
+        {{#each users}}
+    <div class="col-sm-3">
+        <div class="card">
+            {{#if avatar}}
+            <img class="card-img-top" src="{{avatar}}" alt="Card image">
+            {{else}}
+            <img class="card-img-top" src="images/user-logo.png" alt="Card image">
+            {{/if}}
+    <div class="card-body">
+        <h4 class="card-title">{{name}}</h4>
+        <div id="users-icon">
+            <a href="/userProfile/{{_id}}" style="margin-right:30px" class="btn btn-outline-primary">
+            <i class="fa fa-user-o" style="font-size:20px;"></i>
+        </a>
+        <a href="/openChatRoom/{{_id}}" class="btn btn-outline-info" style="margin-left:30px">
+            <i class="fa fa-wechat" style="font-size:18px;"></i>
+        </a>
+        </div>
+    </div>
+    </div>
+    </div>
+    {{/each}}
+    </div>
+</div>
+<div style="display: flex;margin-top:500px" class="element fixed">
+        <a href="#" class="btn btn-outline-info" 
+        style="border-radius: 100px;justify-content:flex-end">
+            <i class="fa fa-user-secret" style="font-size:60px"></i>
+        </a>
+    </div>
+</div>

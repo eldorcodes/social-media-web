@@ -1,0 +1,33 @@
+<div id="post-form-box">
+   <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-md-5">
+                <div class="card">
+            <div class="card-body">
+                <h1>Create a post</h1>
+                <h3 class="red">{{errorMessage}}</h3>
+                    <form action="/createPost" method="post">
+            <div class="mb-3 mt-3">
+                <label for="text" class="form-label">Title:</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" value="{{previousTitle}}">
+            </div>
+             <div class="mb-3 mt-3">
+            <label for="comment">Body:</label>
+            {{#if previousBody}}
+            <textarea class="form-control" rows="5" id="comment" name="body" placeholder="Type message">
+                {{previousBody}}
+            </textarea>
+            {{else}}
+             <textarea class="form-control" rows="5" id="comment" name="body" placeholder="Type message"></textarea>
+            {{/if}}
+            </div>
+            <button type="submit" class="btn btn-primary form-control">Share</button>
+            </form>
+                        </div>
+                    </div>
+            </div>
+            <div class="col"></div>
+        </div>
+   </div>
+</div>
