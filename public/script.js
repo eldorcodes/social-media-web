@@ -87,10 +87,14 @@ $(document).ready(function(){
                 leftMessageDiv.append(leftMessageTag);
                 leftDateDiv.append(smallTag)
                 // append main chat room
-                chatRoom.append(rightMessageDiv);
-                chatRoom.append(rightMessageDiv2);
-                chatRoom.append(leftMessageDiv);
-                chatRoom.append(leftDateDiv);
+                if (message.senderMessage) {
+                    chatRoom.append(rightMessageDiv);
+                    chatRoom.append(rightMessageDiv2);
+                }
+                if (message.receiverMessage) {
+                    chatRoom.append(leftMessageDiv);
+                    chatRoom.append(leftDateDiv);
+                }
 
             });
         } 
@@ -118,7 +122,6 @@ $(document).ready(function(){
                 // create small tag for date
                 let date = $('<small></small>');
                 date.addClass('date');
-                date.text(message.date);
 
                 if (message.receiverMessage !== '') {
                     date.text(moment(message.date).startOf('seconds').fromNow());
@@ -144,7 +147,6 @@ $(document).ready(function(){
                    leftDateDiv.addClass('left-message');
                    // create small tag for receiver date
                   let smallTag = $('<small></small>');
-                  smallTag.text(message.date);
                   smallTag.addClass('date');
 
                   if (message.senderMessage !== '') {
@@ -159,10 +161,14 @@ $(document).ready(function(){
                  leftMessageDiv.append(leftMessageTag);
                  leftDateDiv.append(smallTag)
                  // append main chat room
-                 chatRoom.append(rightMessageDiv);
-                 chatRoom.append(rightMessageDiv2);
-                 chatRoom.append(leftMessageDiv);
-                 chatRoom.append(leftDateDiv);
+                 if (message.receiverMessage) {
+                    chatRoom.append(rightMessageDiv);
+                    chatRoom.append(rightMessageDiv2);
+                 }
+                 if (message.senderMessage) {
+                    chatRoom.append(leftMessageDiv);
+                    chatRoom.append(leftDateDiv);
+                 }
             })
         }
         $('#chatroom').animate({scrollTop:100000},800)

@@ -3,7 +3,7 @@
     <h1>Users</h1>
     <div class="row">
         {{#each users}}
-    <div class="col-sm-3">
+    <div style="max-width: 250px;" class="col-lg-3">
         <div class="card">
             {{#if avatar}}
             <img class="card-img-top" src="{{avatar}}" alt="Card image">
@@ -27,7 +27,7 @@
     </div>
 </div>
 <div style="display: flex;margin-top:500px" class="element fixed">
-        <a href="#" class="btn btn-outline-info" 
+        <a href="/help" class="btn btn-outline-info" 
         style="border-radius: 100px;justify-content:flex-end">
             <i class="fa fa-user-secret" style="font-size:60px"></i>
         </a>
