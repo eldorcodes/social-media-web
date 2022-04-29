@@ -121,7 +121,7 @@ app.get('/errorMsg',ensureGuest,(req,res) => {
     })
 })
 app.get('/profile',requireLogin,(req,res) => {
-    User.findById({_id:req.user.id})
+    User.findById({_id:req.user._id})
     .then((loggedUser) => {
         res.render('profile',{
             loggedUser

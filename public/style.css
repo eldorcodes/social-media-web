@@ -1,19 +1,20 @@
 .red {
     color: red;
 }
+body {
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .green {
     color: green;
 }
 #home {
-    background-color: blueviolet;
     height: 1000px;
 }
 #signup {
-    background-color: blueviolet;
     height: 1000px;
 }
 #help {
-    background-color: blueviolet;
     height: 1000px;
 }
 .my-btn {
